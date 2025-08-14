@@ -1,200 +1,132 @@
-# 🚀 Spreadify Agents - AI-Powered Social Media Automation
+# Spreadify - Agentic AI Spreadsheet Assistant
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python Version">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg" alt="Platform">
-</div>
+A powerful AI-driven web application that helps you analyze and understand your spreadsheet data through natural language queries.
 
-## 📖 Overview
+## 🌟 Features
 
-**Spreadify Agents** is an intelligent browser automation system that revolutionizes social media management through AI-powered agents. Instead of manual posting and engagement, simply give natural language commands and let our AI agents handle everything automatically.
+- **File Upload**: Support for CSV and Excel files (.csv, .xlsx, .xls)
+- **Natural Language Queries**: Ask questions about your data in plain English
+- **AI Analysis**: Powered by OpenAI for intelligent data insights
+- **Interactive Charts**: Visualize your data with dynamic charts
+- **Responsive Design**: Modern, mobile-friendly interface
+- **Serverless Architecture**: Built for Netlify with edge functions
 
-### ✨ Key Features
+## 🚀 Live Demo
 
-- 🤖 **AI-Powered Browser Agents** - Intelligent automation that thinks and acts like humans
-- 🌐 **Multi-Platform Support** - Facebook, Instagram, Twitter, LinkedIn, TikTok, YouTube, Pinterest, Reddit, Telegram, WhatsApp
-- 💬 **Natural Language Commands** - Just tell the agent what you want: "Post about coffee culture on Instagram"
-- 🔄 **Real Browser Automation** - Uses actual browsers, not APIs (no approval needed)
-- 📊 **Smart Analytics** - AI-driven insights and performance optimization
-- 👥 **Team Collaboration** - Multi-user support with role-based permissions
-- 🎯 **Content Intelligence** - AI generates captions, hashtags, and optimizes for each platform
+Visit the live application: [https://spreadify-agentic-ai.netlify.app](https://spreadify-agentic-ai.netlify.app)
 
-## 🚀 Quick Start
+## 🛠️ Technology Stack
 
-### Prerequisites
+- **Frontend**: HTML5, CSS3 (Tailwind CSS), Vanilla JavaScript
+- **Backend**: Netlify Functions (Node.js serverless)
+- **AI Integration**: OpenAI API
+- **Charts**: Chart.js
+- **Hosting**: Netlify
 
-- Python 3.8 or higher
-- Chrome browser installed
+## 📁 Project Structure
 
-### Installation
+```
+├── public/
+│   ├── index.html          # Main HTML file
+│   └── js/
+│       └── app.js          # Frontend JavaScript
+├── netlify/
+│   └── functions/
+│       └── openai.js       # Serverless API function
+├── netlify.toml            # Netlify configuration
+├── package.json            # Dependencies and scripts
+├── README.md               # Project documentation
+└── .gitignore             # Git ignore rules
+```
+
+## 🔧 Local Development
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Lightiam/Spreadify_Agentic_AI.git
+   git clone https://github.com/Imole-cloud/Spreadify_Agentic_AI.git
    cd Spreadify_Agentic_AI
    ```
 
 2. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
-   playwright install chromium
+   npm install
    ```
 
-3. **Run the application**
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+   ```env
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+4. **Run locally with Netlify CLI**
    ```bash
-   python spreadify_agent.py
+   npm run dev
    ```
 
-4. **Open your browser**
-   Navigate to `http://localhost:5000` and click "Start Agent" to see the magic happen!
+## 🚀 Deployment
 
-## 💡 How It Works
+### Automatic Deployment (Recommended)
 
-### Simple Commands, Powerful Results
+1. Fork this repository
+2. Connect your GitHub repository to Netlify
+3. Set the following build settings:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `public`
+4. Add environment variables in Netlify dashboard:
+   - `OPENAI_API_KEY`: Your OpenAI API key
 
-Instead of complex interfaces, just tell Spreadify Agents what you want:
+### Manual Deployment
 
-```
-"Create 5 posts about healthy eating for Instagram and Facebook"
-"Schedule motivational quotes daily for LinkedIn at 9 AM"
-"Find trending hashtags in my industry and create posts using them"
-"Monitor my competitors and create better versions of their top posts"
-"Increase my Instagram engagement by 50% this month"
-```
-
-### AI Agent Workflow
-
-1. **🧠 Understands Your Request** - Natural language processing interprets your goals
-2. **🎨 Creates Content** - Generates engaging captions, finds trending hashtags
-3. **📅 Plans Strategy** - Determines optimal posting times and platform selection
-4. **🤖 Executes Automatically** - Browser agents handle all the posting and engagement
-5. **📈 Learns & Optimizes** - Continuously improves based on performance data
-
-## 🎯 Use Cases
-
-### For Businesses
-- **Brand Awareness**: Automated content creation and posting
-- **Lead Generation**: Targeted engagement and follower growth
-- **Customer Service**: Automated responses and community management
-- **Competitive Intelligence**: Monitor and respond to competitor activity
-
-### For Creators & Influencers
-- **Content Scaling**: Generate unlimited variations of successful content
-- **Cross-Platform Growth**: Simultaneous presence on all major platforms  
-- **Engagement Automation**: Intelligent comment and DM management
-- **Trend Leverage**: Automatically incorporate viral trends and hashtags
-
-### For Agencies
-- **Client Management**: Handle multiple client accounts effortlessly
-- **Reporting**: Automated analytics and performance reports
-- **Team Collaboration**: Role-based access and approval workflows
-- **White Label**: Rebrand for your agency clients
-
-## 🔧 Configuration
-
-### Environment Setup
-
-Create a `.env` file in the root directory:
-
-```env
-# Browser Settings
-HEADLESS_MODE=false
-BROWSER_TIMEOUT=30000
-STEALTH_MODE=true
-
-# AI Configuration  
-AI_MODEL=gpt-4
-CONTENT_LANGUAGE=en
-CREATIVITY_LEVEL=balanced
-
-# Security
-ENCRYPT_CREDENTIALS=true
-SESSION_TIMEOUT=3600
+```bash
+npm run deploy
 ```
 
-### Social Platform Configuration
+## 📋 Usage
 
-The agent automatically detects and adapts to different social platforms. No API keys required!
+1. **Upload Your File**: Click the upload area or drag and drop your CSV/Excel file
+2. **Ask a Question**: Type your question about the data in natural language
+3. **Get Insights**: The AI will analyze your data and provide insights
+4. **View Results**: See text analysis and interactive charts
 
-## 📊 Advanced Features
+### Example Queries
 
-### Smart Content Generation
-- **Platform Optimization**: Automatically adapts content for each social network
-- **Trend Integration**: Incorporates viral topics and hashtags
-- **Brand Voice**: Learns and maintains your unique writing style
-- **Visual Content**: Generates or optimizes images for each post
+- "What are the top 5 highest values in this dataset?"
+- "Show me a summary of sales by region"
+- "What patterns do you see in the data?"
+- "Create a chart showing monthly trends"
 
-### Intelligent Scheduling
-- **Optimal Timing**: AI determines best posting times for your audience
-- **Frequency Management**: Maintains perfect posting consistency
-- **Cross-Platform Coordination**: Coordinates campaigns across all networks
-- **Time Zone Awareness**: Posts at optimal times for global audiences
+## 🔐 Environment Variables
 
-### Advanced Automation
-- **Competitor Monitoring**: Tracks competitor activity and creates better content
-- **Engagement Automation**: Responds to comments and messages intelligently
-- **Hashtag Research**: Finds trending and relevant hashtags automatically
-- **Performance Optimization**: Continuously improves based on analytics
-
-## 🛡️ Security & Safety
-
-### Privacy Protection
-- **Local Processing**: All data processed locally on your machine
-- **Encrypted Storage**: Credentials encrypted with military-grade encryption
-- **No Data Collection**: We don't collect or store your personal information
-- **GDPR Compliant**: Fully compliant with privacy regulations
-
-### Anti-Detection
-- **Human-like Behavior**: Mimics natural user patterns and timing
-- **Fingerprint Masking**: Rotates browser signatures and IP addresses
-- **Rate Limiting**: Respects platform limits to avoid account restrictions
-- **Stealth Mode**: Operates undetected by platform anti-bot systems
-
-## 📈 Analytics & Reporting
-
-### Real-Time Insights
-- **Performance Metrics**: Track engagement, reach, and conversion rates
-- **Audience Analytics**: Understand your follower demographics and behavior  
-- **Content Performance**: Identify your top-performing posts and strategies
-- **Competitive Analysis**: Benchmark against competitors in your industry
-
-### Automated Reporting
-- **Daily Summaries**: Automated daily performance reports
-- **Weekly Insights**: Comprehensive weekly analytics and recommendations
-- **Monthly Reviews**: Detailed monthly performance analysis
-- **Custom Reports**: Generate reports for specific campaigns or time periods
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `OPENAI_API_KEY` | Your OpenAI API key | Yes |
 
 ## 🤝 Contributing
 
-We welcome contributions to Spreadify Agents! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Install development dependencies: `pip install -r requirements-dev.txt`
-4. Make your changes and test thoroughly
-5. Submit a pull request
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 License
+## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## 🙏 Acknowledgments
 
-- 📧 Email: support@spreadify.com
-- 💬 Discord: [Join our community](https://discord.gg/spreadify)
-- 📖 Documentation: [docs.spreadify.com](https://docs.spreadify.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/Lightiam/Spreadify_Agentic_AI/issues)
+- OpenAI for providing the AI capabilities
+- Netlify for hosting and serverless functions
+- Chart.js for data visualization
+- Tailwind CSS for styling
 
-## 🌟 Star History
+## 📞 Support
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Lightiam/Spreadify_Agentic_AI&type=Date)](https://star-history.com/#Lightiam/Spreadify_Agentic_AI&Date)
+If you encounter any issues or have questions, please:
+1. Check the [Issues](https://github.com/Imole-cloud/Spreadify_Agentic_AI/issues) page
+2. Create a new issue if your problem isn't already documented
+3. Provide detailed information about your environment and the issue
 
 ---
 
-<div align="center">
-  <p>Made with ❤️ by the Spreadify team</p>
-  <p>⭐ Star us on GitHub if you find this project useful!</p>
-</div>
+**Built with ❤️ by [Imole-cloud](https://github.com/Imole-cloud)**

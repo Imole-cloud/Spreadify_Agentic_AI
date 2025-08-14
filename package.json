@@ -1,0 +1,24 @@
+{
+  "name": "spreadify-agentic-ai",
+  "version": "1.0.0",
+  "description": "AI-powered spreadsheet analysis tool",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Static site - no build required'",
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": ["ai", "spreadsheet", "analysis", "netlify"],
+  "author": "Imole-cloud",
+  "license": "MIT",
+  "dependencies": {
+    "multiparty": "^4.2.3",
+    "openai": "^4.28.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
